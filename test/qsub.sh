@@ -1,0 +1,8 @@
+bsub -q psn -n 1 -J 26 -o 26.o -e 26.e "sh /YZGROUP3/home-new/G02/work/pipeline/QC/test/26/26.qc.sh"
+bsub -q psn -n 1 -J 27 -o 27.o -e 27.e "sh /YZGROUP3/home-new/G02/work/pipeline/QC/test/27/27.qc.sh"
+bsub -q psn -n 1 -J 29 -o 29.o -e 29.e "sh /YZGROUP3/home-new/G02/work/pipeline/QC/test/29/29.qc.sh"
+bsub -q psn -n 1 -J 32_1 -o 32_1.o -e 32_1.e "sh /YZGROUP3/home-new/G02/work/pipeline/QC/test/32_1/32_1.qc.sh"
+bsub -q psn -n 1 -J 31_1 -o 31_1.o -e 31_1.e "sh /YZGROUP3/home-new/G02/work/pipeline/QC/test/31_1/31_1.qc.sh"
+bsub -q psn -n 1 -J 33 -o 33.o -e 33.e "sh /YZGROUP3/home-new/G02/work/pipeline/QC/test/33/33.qc.sh"
+bsub -q psn -n 1 -J NXB001 -o NXB001.o -e NXB001.e "sh /YZGROUP3/home-new/G02/work/pipeline/QC/test/NXB001/NXB001.qc.sh"
+bsub -q psn -n 1 -J NXT001 -o NXT001.o -e NXT001.e "sh /YZGROUP3/home-new/G02/work/pipeline/QC/test/NXT001/NXT001.qc.sh"

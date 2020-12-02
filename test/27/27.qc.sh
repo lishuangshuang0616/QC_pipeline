@@ -1,0 +1,7 @@
+ln -s /YZGROUP4/STORAGE/personalbio/Work/Transcriptome/Datum/DATA/YFnj20201727/MgPL202011140/2020112001/LDR27153_L1_711D01.R1.fastq.gz /YZGROUP3/home-new/G02/work/pipeline/QC/test/27/1_RawData/27.R1.fastq.gz
+ln -s /YZGROUP4/STORAGE/personalbio/Work/Transcriptome/Datum/DATA/YFnj20201727/MgPL202011140/2020112001/LDR27153_L1_711D01.R2.fastq.gz /YZGROUP3/home-new/G02/work/pipeline/QC/test/27/1_RawData/27.R2.fastq.gz
+mkdir -p /YZGROUP3/home-new/G02/work/pipeline/QC/test/27/1_RawData/fastQC
+/YZGROUP3/home-new/G02/work/pipeline/QC/bin/fastqc /YZGROUP3/home-new/G02/work/pipeline/QC/test/27/1_RawData/27.R1.fastq.gz -t 2 -o /YZGROUP3/home-new/G02/work/pipeline/QC/test/27/1_RawData/fastQC
+/YZGROUP3/home-new/G02/work/pipeline/QC/bin/fastqc /YZGROUP3/home-new/G02/work/pipeline/QC/test/27/1_RawData/27.R2.fastq.gz -t 2 -o /YZGROUP3/home-new/G02/work/pipeline/QC/test/27/1_RawData/fastQC
+/YZGROUP3/home-new/G02/work/pipeline/QC/bin/fastp -i /YZGROUP3/home-new/G02/work/pipeline/QC/test/27/1_RawData/27.R1.fastq.gz -o /YZGROUP3/home-new/G02/work/pipeline/QC/test/27/2_HQData/27_HQ_R1.fq.gz -I /YZGROUP3/home-new/G02/work/pipeline/QC/test/27/1_RawData/27.R2.fastq.gz -O /YZGROUP3/home-new/G02/work/pipeline/QC/test/27/2_HQData/27_HQ_R2.fq.gz --compression=4 --adapter_sequence=AGATCGGAAGAGCACACGTCTGAACTCCAGTCA --adapter_sequence_r2=AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT --length_required=50 --average_qual=20 -n 3 -w 10
+python3 /YZGROUP3/home-new/G02/work/pipeline/QC/bin/stat_fastq.py -i /YZGROUP3/home-new/G02/work/pipeline/QC/test/27
